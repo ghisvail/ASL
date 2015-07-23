@@ -24,7 +24,7 @@ Depends: ${misc:Depends},
 Description: Advanced Simulation Library (development files)
  The Advanced Simulation Library (ASL) is a free and open source multiphysics
  simulation software package.
- . 
+ .
  Its computational engine is based, among others, on the Lattice Boltzmann
  Methods and is written in OpenCL which enable extraordinarily efficient
  deployment on a variety of massively parallel architectures, ranging from
@@ -47,7 +47,7 @@ Depends: ${misc:Depends},
 Description: Advanced Simulation Library (shared library)
  The Advanced Simulation Library (ASL) is a free and open source multiphysics
  simulation software package.
- . 
+ .
  Its computational engine is based, among others, on the Lattice Boltzmann
  Methods and is written in OpenCL which enable extraordinarily efficient
  deployment on a variety of massively parallel architectures, ranging from
@@ -72,7 +72,7 @@ Depends: ${misc:Depends},
 Description: Advanced Simulation Library (debug symbols)
  The Advanced Simulation Library (ASL) is a free and open source multiphysics
  simulation software package.
- . 
+ .
  Its computational engine is based, among others, on the Lattice Boltzmann
  Methods and is written in OpenCL which enable extraordinarily efficient
  deployment on a variety of massively parallel architectures, ranging from
