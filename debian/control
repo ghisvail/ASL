@@ -21,6 +21,7 @@ Section: libdevel
 Architecture: any
 Depends: ${misc:Depends},
          libasl0 (= ${binary:Version})
+Suggests: libasl-doc
 Description: Advanced Simulation Library (development files)
  The Advanced Simulation Library (ASL) is a free and open source multiphysics
  simulation software package.
@@ -39,6 +40,29 @@ Description: Advanced Simulation Library (development files)
  etc...
  .
  This package contains the ASL development files.
+
+Package: libasl-doc
+Section: doc
+Architecture: all
+Depends: ${misc:Depends}
+Description: Advanced Simulation Library (documentation)
+ The Advanced Simulation Library (ASL) is a free and open source multiphysics
+ simulation software package.
+ .
+ Its computational engine is based, among others, on the Lattice Boltzmann
+ Methods and is written in OpenCL which enable extraordinarily efficient
+ deployment on a variety of massively parallel architectures, ranging from
+ inexpensive FPGAs, DSPs and GPUs up to heterogeneous clusters and
+ supercomputers. The engine is hidden entirely behind C++ classes, so that no
+ OpenCL knowledge is required from application programmers.
+ .
+ ASL can be utilized to model various coupled physical and chemical phenomena
+ and employed in a multitude of fields: computational fluid dynamics, virtual
+ sensing, industrial process data validation and reconciliation, image-guided
+ surgery, computer-aided engineering, high-performance scientific computing,
+ etc...
+ .
+ This package contains the ASL documentation.
 
 Package: libasl0
 Architecture: any
@@ -87,3 +111,4 @@ Description: Advanced Simulation Library (debug symbols)
  etc...
  .
  This package contains the ASL debug symbols.
+
