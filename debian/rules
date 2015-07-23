@@ -4,6 +4,9 @@
 # Uncomment this to turn on verbose mode.
 #DH_VERBOSE = 1
 
+export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
+
 %:
 	dh $@ --buildsystem=cmake \
 		--parallel \
