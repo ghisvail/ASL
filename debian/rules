@@ -20,4 +20,4 @@ override_dh_auto_configure:
 		-DBUILD_SHARED_LIBS=ON \
 		-DWITH_EXAMPLES=OFF \
 		-DWITH_MATIO=OFF \
-		-DWITH_API_DOC=OFF
+		-DWITH_API_DOC=ON
