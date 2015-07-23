@@ -10,7 +10,7 @@ Build-Depends: cmake,
                libboost-program-options-dev (>= 1.55),
                libboost-system-dev (>= 1.55),
                ocl-icd-opencl-dev,
-               libvtk-dev (>= 6.1)
+               libvtk6-dev (>= 6.1)
 Standards-Version: 3.9.6
 Vcs-Browser: https://anonscm.debian.org/cgit/debian-science/packages/asl.git
 Vcs-Git: git://anonscm.debian.org/debian-science/packages/asl.git
