@@ -1,0 +1,89 @@
+Source: asl
+Section: science
+Priority: optional
+Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
+Uploaders: Ghislain Antony Vaillant <ghisvail@gmail.com>
+Build-Depends: cmake,
+               debhelper (>= 9),
+               doxygen,
+               libboost-filesystem-dev (>= 1.55),
+               libboost-program-options-dev (>= 1.55),
+               libboost-system-dev (>= 1.55),
+               ocl-icd-opencl-dev,
+               libvtk-dev (>= 6.1)
+Standards-Version: 3.9.6
+Vcs-Browser: https://anonscm.debian.org/cgit/debian-science/packages/asl.git
+Vcs-Git: git://anonscm.debian.org/debian-science/packages/asl.git
+Homepage: http://asl.org.il
+
+Package: libasl-dev
+Section: libdevel
+Architecture: any
+Depends: ${misc:Depends},
+         libasl0 (= ${binary:Version})
+Description: Advanced Simulation Library (development files)
+ The Advanced Simulation Library (ASL) is a free and open source multiphysics
+ simulation software package.
+ . 
+ Its computational engine is based, among others, on the Lattice Boltzmann
+ Methods and is written in OpenCL which enable extraordinarily efficient
+ deployment on a variety of massively parallel architectures, ranging from
+ inexpensive FPGAs, DSPs and GPUs up to heterogeneous clusters and
+ supercomputers. The engine is hidden entirely behind C++ classes, so that no
+ OpenCL knowledge is required from application programmers.
+ .
+ ASL can be utilized to model various coupled physical and chemical phenomena
+ and employed in a multitude of fields: computational fluid dynamics, virtual
+ sensing, industrial process data validation and reconciliation, image-guided
+ surgery, computer-aided engineering, high-performance scientific computing,
+ etc...
+ .
+ This package contains the ASL development files.
+
+Package: libasl0
+Architecture: any
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
+Description: Advanced Simulation Library (shared library)
+ The Advanced Simulation Library (ASL) is a free and open source multiphysics
+ simulation software package.
+ . 
+ Its computational engine is based, among others, on the Lattice Boltzmann
+ Methods and is written in OpenCL which enable extraordinarily efficient
+ deployment on a variety of massively parallel architectures, ranging from
+ inexpensive FPGAs, DSPs and GPUs up to heterogeneous clusters and
+ supercomputers. The engine is hidden entirely behind C++ classes, so that no
+ OpenCL knowledge is required from application programmers.
+ .
+ ASL can be utilized to model various coupled physical and chemical phenomena
+ and employed in a multitude of fields: computational fluid dynamics, virtual
+ sensing, industrial process data validation and reconciliation, image-guided
+ surgery, computer-aided engineering, high-performance scientific computing,
+ etc...
+ .
+ This package contains the ASL shared libraries.
+
+Package: libasl0-dbg
+Section: debug
+Priority: extra
+Architecture: any
+Depends: ${misc:Depends},
+         libasl0 (= ${binary:Version})
+Description: Advanced Simulation Library (debug symbols)
+ The Advanced Simulation Library (ASL) is a free and open source multiphysics
+ simulation software package.
+ . 
+ Its computational engine is based, among others, on the Lattice Boltzmann
+ Methods and is written in OpenCL which enable extraordinarily efficient
+ deployment on a variety of massively parallel architectures, ranging from
+ inexpensive FPGAs, DSPs and GPUs up to heterogeneous clusters and
+ supercomputers. The engine is hidden entirely behind C++ classes, so that no
+ OpenCL knowledge is required from application programmers.
+ .
+ ASL can be utilized to model various coupled physical and chemical phenomena
+ and employed in a multitude of fields: computational fluid dynamics, virtual
+ sensing, industrial process data validation and reconciliation, image-guided
+ surgery, computer-aided engineering, high-performance scientific computing,
+ etc...
+ .
+ This package contains the ASL debug symbols.
