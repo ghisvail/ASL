@@ -1,3 +1,9 @@
+Description: fix bad declaration erros in .pc file 
+Author: Ghislain Antony Vaillant <ghisvail@gmail.com>
+Bug: https://github.com/AvtechScientific/ASL/issues/7
+Forwarded: no
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -12,12 +12,14 @@
