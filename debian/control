@@ -44,7 +44,9 @@ Description: Advanced Simulation Library (development files)
 Package: libasl-doc
 Section: doc
 Architecture: all
-Depends: ${misc:Depends}
+Depends: ${misc:Depends},
+         libjs-jquery,
+         libjs-mathjax
 Description: Advanced Simulation Library (documentation)
  The Advanced Simulation Library (ASL) is a free and open source multiphysics
  simulation software package.
