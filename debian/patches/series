@@ -1,1 +1,3 @@
 fix-cflags-in-pkgconfig.patch
+use-system-mathjax.patch
+doxygen-no-html-timestamps.patch
