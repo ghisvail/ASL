@@ -7,7 +7,7 @@ cmake_minimum_required(VERSION 3.0.2 FATAL_ERROR)
 # Set version number
 set(ASL_VERSION_MAJOR 0)
 set(ASL_VERSION_MINOR 1)
-set(ASL_VERSION_PATCH 4)
+set(ASL_VERSION_PATCH 5)
 
 set(ASL_VERSION ${ASL_VERSION_MAJOR}.${ASL_VERSION_MINOR}.${ASL_VERSION_PATCH})
 
@@ -21,9 +21,8 @@ endif()
 # Enable supplied cmake includes and modules
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/" "${CMAKE_SOURCE_DIR}/cmake/Modules/")
 
-include(GNUInstallDirs)
-
 # Add ASL cmake definitions
+include(ASLPaths)
 include(ASLBuildOptions)
 include(ASLBuildFunctions)
 
@@ -37,15 +36,23 @@ include(${VTK_USE_FILE})
 include_directories(SYSTEM ${OpenCL_INCLUDE_DIRS} ${Boost_INCLUDE_DIRS})
 
 add_subdirectory(src)
-add_subdirectory(test)
+add_subdirectory(utilities)
 
 if (WITH_EXAMPLES)
 	add_subdirectory(examples)
-endif (WITH_EXAMPLES)
+endif()
 
 if (WITH_API_DOC)
 	add_subdirectory(doc)
-endif (WITH_API_DOC)
+endif()
+
+if (WITH_TESTS)
+	# Input/Output tests are labled "IO" and may require input files
+	# Performance tests are labled "Performance"
+	# Run them: ctest [-C Release|Debug] -L Performance
+	# Exclude them: ctest [-C Release|Debug] -LE Performance
+	add_subdirectory(test)
+endif()
 
 # Packaging
 set(CPACK_GENERATOR "TGZ")
