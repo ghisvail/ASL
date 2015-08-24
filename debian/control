@@ -12,6 +12,7 @@ Build-Depends: cmake,
                libmatio-dev,
                libvtk6-dev (>= 6.1),
                ocl-icd-opencl-dev | opencl-dev,
+               pocl-opencl-icd | opencl-icd
 Standards-Version: 3.9.6
 Vcs-Browser: https://anonscm.debian.org/cgit/debian-science/packages/asl.git
 Vcs-Git: git://anonscm.debian.org/debian-science/packages/asl.git
