@@ -1,3 +1,8 @@
+Description: use system mathjax instead of cdn
+Author: Ghislain Antony Vaillant <ghisvail@gmail.com>
+Forwarded: not-needed 
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 --- a/doc/Developer-Guide/Doxyfile.in
 +++ b/doc/Developer-Guide/Doxyfile.in
 @@ -1527,7 +1527,7 @@
