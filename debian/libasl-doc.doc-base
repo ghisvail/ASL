@@ -1,0 +1,9 @@
+Document: libasl-doc
+Title: ASL Documentation
+Author: Avtech Scientific
+Abstract: This is the reference documentation for ASL.
+Section: Programming
+
+Format: HTML
+Index: /usr/share/doc/libasl-doc/html/index.html
+Files: /usr/share/doc/libasl-doc/html/*.html
