@@ -4,7 +4,7 @@ For more information, please visit <http://asl.org.il>.
 
 # ASL
 
-__Advanced Simulation Library (ASL)__ is a free and open source multiphysics simulation software package. Its computational engine is based, among others, on the [Lattice Boltzmann Methods](http://en.wikipedia.org/wiki/Lattice_Boltzmann_methods) and is written in [OpenCL](http://en.wikipedia.org/wiki/OpenCL) which enable [extraordinarily efficient deployment](http://asl.org.il/benchmarks) on a variety of massively parallel architectures, ranging from inexpensive FPGAs, DSPs and GPUs up to heterogeneous clusters and supercomputers. The engine is hidden entirely behind C++ classes, so that no OpenCL knowledge is required from application programmers. ASL can be utilized to model various coupled physical and chemical phenomena and employed in a multitude of fields: computational fluid dynamics, virtual sensing, industrial process data validation and reconciliation, image-guided surgery, computer-aided engineering, high-performance scientific computing, etc..
+__Advanced Simulation Library (ASL)__ is a free and open source multiphysics simulation software package. Its computational engine is based, among others, on the [Lattice Boltzmann Methods](http://en.wikipedia.org/wiki/Lattice_Boltzmann_methods) and is written in [OpenCL](http://en.wikipedia.org/wiki/OpenCL) which enable [extraordinarily efficient deployment](http://asl.org.il/benchmarks) on a variety of massively parallel architectures, ranging from inexpensive FPGAs, DSPs and GPUs up to heterogeneous clusters and supercomputers. The engine is hidden entirely behind C++ classes, so that no OpenCL knowledge is required from application programmers. ASL can be utilized to model various coupled physical and chemical phenomena and employed in a multitude of fields: computational fluid dynamics, virtual sensing, industrial process data validation and reconciliation, image-guided surgery, computer-aided engineering, high-performance scientific computing, crystallography, etc..
 
 
 ## License
@@ -35,16 +35,17 @@ Professional consulting, training and integration services are provided by [Avte
 ### Running an example
 
 1. Go to examples: `cd examples/flow/locomotive`
-2. `./asl-locomotive --input ../../../../ASL/examples/input_data/locomotive.stl`  
+2. Download geometry file [locomotive.stl](http://asl.org.il/input_data/locomotive.stl) from the [ASL input data page](http://asl.org.il/input_data).
+3. Run: `./asl-locomotive --input locomotive.stl`  
 Optionally: change parameters `./asl-locomotive --input locomotive.stl --dx 1 --dt 2` or write all of them into a file for later editing/reuse - `./asl-locomotive -g bigGrid.ini`. List all available options - `./asl-locomotive -h`.
-3. Post-processing: see [step by step example](https://github.com/AvtechScientific/ASL/wiki/User-Guide#post-processing) and `examples/input_data/locomotive.pvsm` - the ParaView state file.
+4. Post-processing: see [step by step example](https://github.com/AvtechScientific/ASL/wiki/User-Guide#post-processing) and [locomotive.pvsm](http://asl.org.il/input_data/locomotive.pvsm) - the ParaView state file.
 
 ### Writing your own code using ASL
 
 1. Take a look on [examples](http://asl.org.il/doc/Developer-Guide/examples.html) and the [API documentation](http://asl.org.il/doc/Developer-Guide/), start with [examples/flow/locomotive.cc](http://asl.org.il/doc/Developer-Guide/locomotive_8cc-example.html)
 2. ASL installation supplies `ASL.pc` and `ASLConfig.cmake` files. To build your program using:
 
-- `pkg-config`: ``c++ `pkg-config --cflags --libs ASL` -o locomotive locomotive.cc``
+- `pkg-config`: ``c++ `pkg-config --cflags --libs ASL` -std=c++11 -o flow flow.cc``
 - `cmake`: write a basic `CMakeLists.txt` file:
 
 ```cmake

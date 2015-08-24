@@ -1,3 +1,25 @@
+#
+# Advanced Simulation Library <http://asl.org.il>
+# 
+# Copyright 2015 Avtech Scientific <http://avtechscientific.com>
+#
+#
+# This file is part of Advanced Simulation Library (ASL).
+#
+# ASL is free software: you can redistribute it and/or modify it
+# under the terms of the GNU Affero General Public License as
+# published by the Free Software Foundation, version 3 of the License.
+#
+# ASL is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU Affero General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License
+# along with ASL. If not, see <http://www.gnu.org/licenses/>.
+#
+
+
 project(ASL)
 
 # After switching to 3.1 - remove FindOpenCL.cmake from the distribution
@@ -7,7 +29,7 @@ cmake_minimum_required(VERSION 3.0.2 FATAL_ERROR)
 # Set version number
 set(ASL_VERSION_MAJOR 0)
 set(ASL_VERSION_MINOR 1)
-set(ASL_VERSION_PATCH 5)
+set(ASL_VERSION_PATCH 6)
 
 set(ASL_VERSION ${ASL_VERSION_MAJOR}.${ASL_VERSION_MINOR}.${ASL_VERSION_PATCH})
 
@@ -47,10 +69,14 @@ if (WITH_API_DOC)
 endif()
 
 if (WITH_TESTS)
-	# Input/Output tests are labled "IO" and may require input files
-	# Performance tests are labled "Performance"
-	# Run them: ctest [-C Release|Debug] -L Performance
-	# Exclude them: ctest [-C Release|Debug] -LE Performance
+	# Test labels:
+	# DoublePrecision - tests that use double precision (will fail if device does not support it)
+	# IO - Input/Output tests (may require input files)
+	# Performance - performance tests
+	#
+	# Run them e.g.: `ctest [-C Release|Debug] -L Performance`
+	# Exclude some of them: `ctest -LE DoublePrecision -LE Performance`
+	enable_testing()
 	add_subdirectory(test)
 endif()
 
@@ -135,7 +161,7 @@ install(FILES
 get_property(ASL_SUBLIBS GLOBAL PROPERTY ASL_SUBLIBS_GLOBAL_PROPERTY)
 
 configure_file(
-	${CMAKE_SOURCE_DIR}/cmake/ASL.pc.cmake.in
+	${CMAKE_SOURCE_DIR}/cmake/ASL.pc.in
 	${CMAKE_CURRENT_BINARY_DIR}/ASL.pc
 	@ONLY
 )
