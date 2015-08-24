@@ -1,0 +1,11 @@
+Name: Advanced Simulation Library
+Bug-Database: https://github.com/AvtechScientific/ASL/issues
+Bug-Submit: https://github.com/AvtechScientific/ASL/issues
+Cite-As: ASL (Advanced Simulation Library), an open source multiphysics simulation software package. <http://asl.org.il>. Avtech Scientific. Modiin Illit, Israel.
+Gallery: http://asl.org.il/benchmarks/
+Contact: contact@avtechscientific.com
+Repository: https://github.com/AvtechScientific/ASL.git
+Repository-Browse: https://github.com/AvtechScientific/ASL
+Screenshots: http://asl.org.il/media/benchmarks/multicomponent_flow/multicomponent_flow_3D_Re1000_50.png
+Reference:
+  Author: Avtech Scientific <contact@avtechscientific.com>
