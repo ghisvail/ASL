@@ -23,7 +23,7 @@ Architecture: any
 Depends: ${misc:Depends},
          libasl0 (= ${binary:Version})
 Suggests: libasl-doc
-Description: Advanced Simulation Library (development files)
+Description: multiphysics simulation software (development files)
  The Advanced Simulation Library (ASL) is a free and open source multiphysics
  simulation software package.
  .
@@ -40,7 +40,7 @@ Description: Advanced Simulation Library (development files)
  surgery, computer-aided engineering, high-performance scientific computing,
  etc...
  .
- This package contains the ASL development files.
+ This package contains the development files for ASL.
 
 Package: libasl-doc
 Section: doc
@@ -48,7 +48,7 @@ Architecture: all
 Depends: ${misc:Depends},
          libjs-jquery,
          libjs-mathjax
-Description: Advanced Simulation Library (documentation)
+Description: multiphysics simulation software (documentation)
  The Advanced Simulation Library (ASL) is a free and open source multiphysics
  simulation software package.
  .
@@ -65,13 +65,13 @@ Description: Advanced Simulation Library (documentation)
  surgery, computer-aided engineering, high-performance scientific computing,
  etc...
  .
- This package contains the ASL documentation.
+ This package contains the documentation for ASL.
 
 Package: libasl0
 Architecture: any
 Depends: ${misc:Depends},
          ${shlibs:Depends}
-Description: Advanced Simulation Library (shared library)
+Description: multiphysics simulation software (shared libraries)
  The Advanced Simulation Library (ASL) is a free and open source multiphysics
  simulation software package.
  .
@@ -96,7 +96,7 @@ Priority: extra
 Architecture: any
 Depends: ${misc:Depends},
          libasl0 (= ${binary:Version})
-Description: Advanced Simulation Library (debug symbols)
+Description: multiphysics simulation software (debugging symbols)
  The Advanced Simulation Library (ASL) is a free and open source multiphysics
  simulation software package.
  .
@@ -113,5 +113,5 @@ Description: Advanced Simulation Library (debug symbols)
  surgery, computer-aided engineering, high-performance scientific computing,
  etc...
  .
- This package contains the ASL debug symbols.
+ This package contains the debugging symbols for ASL.
 
